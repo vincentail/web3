@@ -15,7 +15,7 @@ const runMain = async() => {
         process.exit(0);
     } catch (error) {
         console.error(error);
-        process.ext(1);
+        process.exit(1);
     }
 }
 
