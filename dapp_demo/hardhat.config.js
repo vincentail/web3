@@ -17,11 +17,15 @@ task("accounts", "Prints the list of accounts", async(taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-    defaultNetwork: "goerli",
-    solidity: "0.8.4",
+    defaultNetwork: "kovan",
+    solidity: "0.8.7",
     networks: {
         goerli: {
             url: "https://eth-goerli.alchemyapi.io/v2/ZdlrULAQPEnvUTcyZFM-h5-3YLHX0UHx",
+            accounts: ["5ac71b08416f0f480a358500c33759ae295089a5ca6c6618fa6bac06ed76f60a"]
+        },
+        kovan: {
+            url: "https://kovan.infura.io/v3/2cd0aa69e0ea46798346a9bfae4e771f",
             accounts: ["5ac71b08416f0f480a358500c33759ae295089a5ca6c6618fa6bac06ed76f60a"]
         }
     }

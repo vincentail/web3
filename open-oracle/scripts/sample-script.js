@@ -14,12 +14,12 @@ async function main() {
     // await hre.run('compile');
 
     // We get the contract to deploy
-    const MyDataFeedConsumer = await hre.ethers.getContractFactory("MyDataFeedConsumer");
-    const myToken = await MyDataFeedConsumer.deploy();
+    const Greeter = await hre.ethers.getContractFactory("OpenOraclePriceData");
+    const greeter = await Greeter.deploy();
 
-    await myToken.deployed();
+    await greeter.deployed();
 
-    console.log("MyDataFeedConsumer deployed to:", myToken.address);
+    console.log("Greeter deployed to:", greeter.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
